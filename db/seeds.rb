@@ -11,6 +11,7 @@ require 'pry'
 City.destroy_all
 User.destroy_all
 Gossip.destroy_all
+Comment.destroy_all
 puts "Previous data destroyed"
 
 10.times do
@@ -30,6 +31,12 @@ end
     Gossip.create(title: Faker::Book.title, content: Faker::ChuckNorris.fact, user: User.all.sample)
 end
     puts "20 juicy gossips created"
+
+30.times do
+    Comment.create(content: Faker::Marketing.buzzwords, gossip: Gossip.all.sample)
+end
+
+puts "30 comments created"
 
 
 
