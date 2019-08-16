@@ -1,0 +1,9 @@
+<h1> Les super-potins ! </h1>
+
+<p> <% @gossip.each do |n| %>
+  Nom du potin :  <%= n.title %> <br>
+   Auteur du potin :  <%= n.user.first_name %>
+    <br> <br>
+    <% end %>
+    
+</p>
