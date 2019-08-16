@@ -2,9 +2,10 @@
 
 <p> 
    Titre : <%= @gossip.find(id = params[:id]).title %> <br>
-   Auteur : <a href= /users/<% @gossip.find(id = params[:id]).user.id%>>  <%= @gossip.find(id = params[:id]).user.first_name%> <%= @gossip.find(id = params[:id]).user.last_name%> </a> <br>
+   Auteur : <a href= /users/<%=@gossip.find(id = params[:id]).user.id%> >  <%= @gossip.find(id = params[:id]).user.first_name%> <%= @gossip.find(id = params[:id]).user.last_name%> </a> <br>
    Contenu : <%= @gossip.find(id = params[:id]).content%><br>
    Date de création : <%= @gossip.find(id = params[:id]).created_at%><br>
+   
     
     
 </p>

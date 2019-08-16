@@ -1,9 +1,26 @@
 <h1> Les super-potins ! </h1>
 
-<p> <% @gossip.each do |n| %>
-  Nom du potin :  <%= n.title %> <br>
-   Auteur du potin :  <%= n.user.first_name %>
-    <br> <br>
+<div class = "container">
+<div class = "row"> 
+<% @gossip.each do |n| %>
+    <div class = "col">
+    <div class = "d-flex justify-content-center">
+        <div class="card text-center" style="width: 18rem;">
+            <div class ="col sm-4">
+                <div class="card-body">
+                <h5 class="card-title"><%= n.title[0..20]%>...</h5> 
+                <h6 class="card-subtitle mb-2 text-muted">de :  <%= n.user.first_name %> </h6>
+                    <a href="#" class="btn btn-primary">Aller sur le potin</a>
+                </div>
+            </div>
+        
+        </div>
+        <br>
+    </div> 
+    <br>
+    </div> 
     <% end %>
-    
-</p>
+</div> 
+</div>
+
+  
