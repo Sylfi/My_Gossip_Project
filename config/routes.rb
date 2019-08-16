@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   
-#get ‘static/team', to: ’nomdufichiercontroller#nom de la méthodemetho’
+get '/team', to: 'static#team'
+get '/contact', to: 'static#contact'
 
-  resources :city
+resources :city
 resources :comment
 resources :gossip
 resources :user
