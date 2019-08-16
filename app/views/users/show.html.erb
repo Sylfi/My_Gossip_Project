@@ -1,0 +1,10 @@
+<h1> Les détails de l'utilisateur n. <%=params[:id]%> </h1>
+
+<p>
+    Nom : <%= @user.find(params[:id]).first_name %> <%= @find_user.last_name %> <br>
+    Age : <%= @find_user.age %><br>
+    Ville d'origine : <%= @find_user.city.name %><br>
+    Biographie : <%= @find_user.description %><br>
+ </p>
+
+

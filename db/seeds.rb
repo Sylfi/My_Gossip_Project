@@ -22,7 +22,8 @@ end
 10.times do
     first_name = Faker::Name.first_name
     last_name = Faker::Name.last_name
-    User.create(first_name: first_name, last_name: last_name, email: "#{first_name}.#{last_name}@yopmail.com", age: Faker::Number.between(from: 12, to: 82), city: City.all.sample)
+    User.create(first_name: first_name, last_name: last_name, email: "#{first_name}.#{last_name}@yopmail.com", age: Faker::Number.between(from: 12, to: 82), city: City.all.sample,
+    description: Faker::Quote.famous_last_words)
     #Special thanks to Lucas ! As well as to God who created me and Lucas as we are today. 
 end
     puts "10 dummy users created"
